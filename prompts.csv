@@ -1,53 +1,139 @@
 "task_no","zero-shot","roleplay-role","role-playing"
-1,"Summarize this Java method for me: public Map < String , Integer > countWordFrequency ( List < String > words ) {
+1,"Summarize this Java method for me: ```public Map < String , Integer > countWordFrequency ( List < String > words ) {
 Map < String , Integer > freqMap = new HashMap < >() ;
 for ( String word : words ) {
 freqMap . put ( word , freqMap . getOrDefault ( word , 0) + 1) ;
 }
 return freqMap ;
-}","You are an expert software engineer with many years of experience.","You are tasked with helping a new intern learn Java. Provide a concise summary of the following Java method: public Map < String , Integer > countWordFrequency ( List < String > words ) {
+}```","You are an expert software engineer with many years of experience.","You are tasked with helping a new intern learn Java. Provide a concise summary of the following Java method: ```public Map < String , Integer > countWordFrequency ( List < String > words ) {
 Map < String , Integer > freqMap = new HashMap < >() ;
 for ( String word : words ) {
 freqMap . put ( word , freqMap . getOrDefault ( word , 0) + 1) ;
 }
 return freqMap ;
-}"
-2,"There is a bug in this python method, please tell me what it is and how to fix it: def sum_range ( start , end ) :
+}```"
+2,"There is a bug in this python method, please tell me what it is and how to fix it: ```def sum_range ( start , end ) :
   total = 0
   for i in range ( start , end ) :
     total += i
-  return total","You are an expert software engineer with many years of experience.","You are guest lecturing for an introductory python course, using the following python code to introduce a common error present in the method. Identify the error and explain how to fix it as if you were lecturing a class. Code: def sum_range ( start , end ) :
+  return total```","You are an expert software engineer with many years of experience.","You are guest lecturing for an introductory python course, using the following python code to introduce a common error present in the method. Identify the error and explain how to fix it as if you were lecturing a class. Code: ```def sum_range ( start , end ) :
   total = 0
   for i in range ( start , end ) :
     total += i
-  return total"
-3,"Classify the type of the bug in this C++ code: int * getArray ( int size ) {
+  return total```"
+3,"Classify the type of the bug in this C++ code: ```int * getArray ( int size ) {
 int arr [ size ]; // Warning : local array
 return arr ; // Bug : returning pointer to local variable
-}","You are an expert software engineer with many years of experience.","You work for a small company and have discovered a bug in their C++ codebase. You need to classify the type of bug in order to properly record and report it. Here is the code you found: int * getArray ( int size ) {
+}```","You are an expert software engineer with many years of experience.","You work for a small company and have discovered a bug in their C++ codebase. You need to classify the type of bug in order to properly record and report it. Here is the code you found: ```int * getArray ( int size ) {
 int arr [ size ]; // Warning : local array
 return arr ; // Bug : returning pointer to local variable
-}"
-4,"Generate a python method starting with def is_valid_email(email): that validates email addresses using a regex function.","You are an expert software engineer with many years of experience.","You are trying to create a website for your research, and have an email signup. You need to validate the syntax of any email addresses that users sign up with. Using python, how could you use regex in a method to do this? Start the method with def is_valid_email(email):"
-5,"I'm using Flask API in Python and need to create a '/greet/<username>' endpoint which returns a JSON greeting. Here is my code so far: from flask import Flask , jsonify
+}```"
+4,"Generate a python method starting with ```def is_valid_email(email):``` that validates email addresses using a regex function.","You are an expert software engineer with many years of experience.","You are trying to create a website for your research, and have an email signup. You need to validate the syntax of any email addresses that users sign up with. Using python, how could you use regex in a method to do this? Start the method with ```def is_valid_email(email):```"
+5,"I'm using Flask API in Python and need to create a '/greet/<username>' endpoint which returns a JSON greeting. Here is my code so far: ```from flask import Flask , jsonify
 app = Flask ( __name__ )
 @app . route ( ’/ greet / < username > ’)
 def greet ( username ) :
 # TODO : Return a JSON greeting
-pass","You are an expert software engineer with many years of experience.","You are experimenting with Flask API in python, trying to create a '/greet/<username>' endpoint and have it return a JSON greeting. How would you go about this?"
-6,"I'm trying to design an SQL schema for a review app containing users, books, and reviews. I have the following pseudocode, please generate me a schema. -- TODO : Design schema with appropriate keys and constraints
+pass```","You are an expert software engineer with many years of experience.","You are experimenting with Flask API in python, trying to create a '/greet/<username>' endpoint and have it return a JSON greeting. How would you go about this? You already have the following code: ```from flask import Flask , jsonify
+app = Flask ( __name__ )
+@app . route ( ’/ greet / < username > ’)
+def greet ( username ) :
+# TODO : Return a JSON greeting
+pass```"
+6,"I'm trying to design an SQL schema for a review app containing users, books, and reviews. I have the following pseudocode, please generate me a schema. ```-- TODO : Design schema with appropriate keys and constraints
 -- Tables : users ( id , name ) , books ( id , title ) , reviews ( id , user_id , book_id ,
-rating )","You are an expert software engineer with many years of experience.","You are focusing on backend SQL development for your new app, a review app that handles users, books, and reviews. How would you design an SQL schema? You have the following pseudocode: -- TODO : Design schema with appropriate keys and constraints
+rating )```","You are an expert software engineer with many years of experience.","You are focusing on backend SQL development for your new app, a review app that handles users, books, and reviews. How would you design an SQL schema? You have the following pseudocode: ```-- TODO : Design schema with appropriate keys and constraints
 -- Tables : users ( id , name ) , books ( id , title ) , reviews ( id , user_id , book_id ,
-rating )"
-7,"Why am I getting null errors in this Java code: public int getLength ( String s ) {
+rating )```"
+7,"Why am I getting null errors in this Java code: ```public int getLength ( String s ) {
 return s . length () ; // What if s is null ?
-}","You are an expert software engineer with many years of experience.","You've been tasked with a code review, and got to this Java code: public int getLength ( String s ) {
+}```","You are an expert software engineer with many years of experience.","You've been tasked with a code review, and got to this Java code: ```public int getLength ( String s ) {
 return s . length () ; // What if s is null ?
-}. What potential bugs would you report here?"
-8,"Implement quoted fields support for the following python CSV parser: def parse_csv_line ( line ) :
-  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields","You are an expert software engineer with many years of experience.","You are working on helping improve a company's data processing infrastructure, and have been instructed to improve the following python CSV parser to be able to handle quoted fields: def parse_csv_line ( line ) :
-  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields. How would you do this?"
-9,"Use Ktor to convert this data class into a REST API: data class Product ( val id : Int , val name : String , val price : Double )
-// TODO : Create GET and POST endpoints using Ktor","You are an expert software engineer with many years of experience.","You have been assigned to convert a data class into a REST API, and have been instructed to use Ktor. Here is the data class: data class Product ( val id : Int , val name : String , val price : Double )
-// TODO : Create GET and POST endpoints using Ktor. How would you do this?"
+}```. What potential bugs would you report here?"
+8,"Implement quoted fields support for the following python CSV parser: ```def parse_csv_line ( line ) :
+  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields```","You are an expert software engineer with many years of experience.","You are working on helping improve a company's data processing infrastructure, and have been instructed to improve the following python CSV parser to be able to handle quoted fields: ```def parse_csv_line ( line ) :
+  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields```. How would you do this?"
+9,"Use Ktor to convert this data class into a REST API: ```data class Product ( val id : Int , val name : String , val price : Double )
+// TODO : Create GET and POST endpoints using Ktor```","You are an expert software engineer with many years of experience.","You have been assigned to convert a data class into a REST API, and have been instructed to use Ktor. Here is the data class: ```data class Product ( val id : Int , val name : String , val price : Double )
+// TODO : Create GET and POST endpoints using Ktor```. How would you do this?"
+10,"Concisely summarize this python method:  ```def reverse_words ( sentence ) :
+  return ’ ’. join ( sentence . split () [:: -1])```","You are an expert software engineer with many years of experience.", "You are teaching a new hire some basic python, and are explaining the following python method: ```def reverse_words ( sentence ) :
+  return ’ ’. join ( sentence . split () [:: -1])```. Provide a brief summary."
+11,"Generate a python function that checks if a number is prime.","You are an expert software engineer with many years of experience.","You are writing a basic example python method that takes a number n and checks if it's prime to show some interns. Provide the method."
+12,"Fix the bug in this python method present when n=0: ```def factorial ( n ) :
+  result = 1
+  for i in range (1 , n ) :
+    result *= i
+  return result```","You are an expert software engineer with many years of experience.","You're doing a routine code review and got to this method in your python code base: ```def factorial ( n ) :
+  result = 1
+  for i in range (1 , n ) :
+    result *= i
+  return result```. When n-0, there is a bug. How would you fix it?"
+13,"I'm trying to implement a linked list in C, and need to implement delete by value. I have this code already: ```struct Node {
+int data ;
+struct Node * next ;
+};
+void deleteNode ( struct Node ** head , int key ) {
+// TODO : Implement node deletion
+}```","You are an expert software engineer with many years of experience.","You're practicing your C coding by implementing a linked list from scratch, and have reached the point where you need to implement delete by value. You have the following code: ```struct Node {
+int data ;
+struct Node * next ;
+};
+void deleteNode ( struct Node ** head , int key ) {
+// TODO : Implement node deletion
+}```. How would you do this?"
+14,"Generate a recursive fibonacci function from the pseudocode ```def fibonacci ( n ) :
+  # TODO : Base cases and recursive call
+  pass```","You are an expert software engineer with many years of experience.","You are creating a python method to calculate fibonacci recursively, starting from the following pseudocode: ```def fibonacci ( n ) :
+  # TODO : Base cases and recursive call
+  pass```. What function would you write?"
+15,"Complete this constructor in python: ```class Person :
+  def __init__ ( self ) :
+    # TODO : Add name , age , and optional email
+    pass```","You are an expert software engineer with many years of experience.","You are making a new class for your company that tracks basic information for employees, and have the following constructor already: ```class Person :
+  def __init__ ( self ) :
+    # TODO : Add name , age , and optional email
+    pass```. How would you finish this constructor?"
+16,"I am working on a binary search implementation in Java, can you complete this implementation for me: ```public int binarySearch ( int [] arr , int target ) {
+int left = 0 , right = arr . length - 1;
+while ( left <= right ) {
+int mid = ( left + right ) / 2;
+// TODO : Compare and adjust bounds
+}
+return -1;
+}```","You are an expert software engineer with many years of experience.","You are working on a Java implementation of a binary search, and have the following code: ```public int binarySearch ( int [] arr , int target ) {
+int left = 0 , right = arr . length - 1;
+while ( left <= right ) {
+int mid = ( left + right ) / 2;
+// TODO : Compare and adjust bounds
+}
+return -1;
+}```. How would you finish your implementation?"
+17,"This C++ function does not do what I expect based on the function name, why is this? ```// Supposed to return true if x is even
+bool isOdd ( int x ) {
+return x % 2 == 0; // Logic contradicts function name
+}```","You are an expert software engineer with many years of experience.","You encounter an inconsistency between the expected and actual behavior of the following function: ```// Supposed to return true if x is even
+bool isOdd ( int x ) {
+return x % 2 == 0; // Logic contradicts function name
+}```. What would you say is the issue here?"
+18,"I am running into a bug with the following JavaScript function: ```function isEven ( n ) {
+return n % 2; // Returns 1 or 0 , not true / false
+}```. Can you identify what the problem is and provide a solution?","You are an expert software engineer with many years of experience.","You're reviewing an intern's code and find this function: ```function isEven ( n ) {
+return n % 2; // Returns 1 or 0 , not true / false
+}```. Identify the bug present and summarize an explanation of the bug as well as provide code that would fix it."
+19,"Decompose the high-level comment/summary into logical steps in this C++ method: ```// Function that validates an input , calculates square , and returns result
+int process ( int x ) {
+if ( x < 0) return -1;
+return x * x ;
+}```","You are an expert software engineer with many years of experience.","Given the following C++ method, how would you rewrite the high-level comment into a logical summary of steps? ```// Function that validates an input , calculates square , and returns result
+int process ( int x ) {
+if ( x < 0) return -1;
+return x * x ;
+}```"
+20,"Complete the python function based on intent: ```def calculate_average ( scores ) :
+  total = 0
+  # TODO : Complete to return average
+  pass```","You are an expert software engineer with many years of experience.","How would you complete the following python function based on the comment? ```def calculate_average ( scores ) :
+  total = 0
+  # TODO : Complete to return average
+  pass```"
