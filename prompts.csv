@@ -1,11 +1,11 @@
-"task_no","zero-shot","role-playing"
+"task_no","zero-shot","roleplay-role","role-playing"
 1,"Summarize this Java method for me: public Map < String , Integer > countWordFrequency ( List < String > words ) {
 Map < String , Integer > freqMap = new HashMap < >() ;
 for ( String word : words ) {
 freqMap . put ( word , freqMap . getOrDefault ( word , 0) + 1) ;
 }
 return freqMap ;
-}","You are an expert software engineer with many years of experience, and are tasked with helping a new intern learn Java. Provide a concise summary of the following Java method: public Map < String , Integer > countWordFrequency ( List < String > words ) {
+}","You are an expert software engineer with many years of experience.","You are tasked with helping a new intern learn Java. Provide a concise summary of the following Java method: public Map < String , Integer > countWordFrequency ( List < String > words ) {
 Map < String , Integer > freqMap = new HashMap < >() ;
 for ( String word : words ) {
 freqMap . put ( word , freqMap . getOrDefault ( word , 0) + 1) ;
@@ -24,19 +24,30 @@ return freqMap ;
 3,"Classify the type of the bug in this C++ code: int * getArray ( int size ) {
 int arr [ size ]; // Warning : local array
 return arr ; // Bug : returning pointer to local variable
-}","You are an expert software developer for a small company and have discovered a bug in their C++ codebase. You need to classify the type of bug in order to properly record and report it. Here is the code you found: int * getArray ( int size ) {
+}","You are an expert software engineer with many years of experience.","You work for a small company and have discovered a bug in their C++ codebase. You need to classify the type of bug in order to properly record and report it. Here is the code you found: int * getArray ( int size ) {
 int arr [ size ]; // Warning : local array
 return arr ; // Bug : returning pointer to local variable
 }"
-4,"Generate a python method starting with def is_valid_email(email): that validates email addresses using a regex function.","You are an expert software engineer trying to create a website for your research, and have an email signup. You need to validate the syntax of any email addresses that users sign up with. Using python, how could you use regex in a method to do this? Start the method with def is_valid_email(email):"
+4,"Generate a python method starting with def is_valid_email(email): that validates email addresses using a regex function.","You are an expert software engineer with many years of experience.","You are trying to create a website for your research, and have an email signup. You need to validate the syntax of any email addresses that users sign up with. Using python, how could you use regex in a method to do this? Start the method with def is_valid_email(email):"
 5,"I'm using Flask API in Python and need to create a '/greet/<username>' endpoint which returns a JSON greeting. Here is my code so far: from flask import Flask , jsonify
 app = Flask ( __name__ )
 @app . route ( ’/ greet / < username > ’)
 def greet ( username ) :
 # TODO : Return a JSON greeting
-pass","You're an expert software engineer experimenting with Flask API in python. You are trying to create a '/greet/<username>' endpoint and have it return a JSON greeting. How would you go about this?"
+pass","You are an expert software engineer with many years of experience.","You are experimenting with Flask API in python, trying to create a '/greet/<username>' endpoint and have it return a JSON greeting. How would you go about this?"
 6,"I'm trying to design an SQL schema for a review app containing users, books, and reviews. I have the following pseudocode, please generate me a schema. -- TODO : Design schema with appropriate keys and constraints
 -- Tables : users ( id , name ) , books ( id , title ) , reviews ( id , user_id , book_id ,
-rating )", "You are an expert software engineer focusing on backend SQL development for your new app, a review app that handles users, books, and reviews. How would you design an SQL schema? You have the following pseudocode: -- TODO : Design schema with appropriate keys and constraints
+rating )","You are an expert software engineer with many years of experience.","You are focusing on backend SQL development for your new app, a review app that handles users, books, and reviews. How would you design an SQL schema? You have the following pseudocode: -- TODO : Design schema with appropriate keys and constraints
 -- Tables : users ( id , name ) , books ( id , title ) , reviews ( id , user_id , book_id ,
 rating )"
+7,"Why am I getting null errors in this Java code: public int getLength ( String s ) {
+return s . length () ; // What if s is null ?
+}","You are an expert software engineer with many years of experience.","You've been tasked with a code review, and got to this Java code: public int getLength ( String s ) {
+return s . length () ; // What if s is null ?
+}. What potential bugs would you report here?"
+8,"Implement quoted fields support for the following python CSV parser: def parse_csv_line ( line ) :
+  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields","You are an expert software engineer with many years of experience.","You are working on helping improve a company's data processing infrastructure, and have been instructed to improve the following python CSV parser to be able to handle quoted fields: def parse_csv_line ( line ) :
+  return line . split ( ’ , ’) # Incomplete : doesn ’t handle quoted fields. How would you do this?"
+9,"Use Ktor to convert this data class into a REST API: data class Product ( val id : Int , val name : String , val price : Double )
+// TODO : Create GET and POST endpoints using Ktor","You are an expert software engineer with many years of experience.","You have been assigned to convert a data class into a REST API, and have been instructed to use Ktor. Here is the data class: data class Product ( val id : Int , val name : String , val price : Double )
+// TODO : Create GET and POST endpoints using Ktor. How would you do this?"
