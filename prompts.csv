@@ -16,7 +16,7 @@ return freqMap ;
   total = 0
   for i in range ( start , end ) :
     total += i
-  return total", "You are an expert software engineer guest lecturing for an introductory python course, using the following python code to introduce a common error present in the method. Identify the error and explain how to fix it as if you were lecturing a class. Code: def sum_range ( start , end ) :
+  return total","You are an expert software engineer with many years of experience.","You are guest lecturing for an introductory python course, using the following python code to introduce a common error present in the method. Identify the error and explain how to fix it as if you were lecturing a class. Code: def sum_range ( start , end ) :
   total = 0
   for i in range ( start , end ) :
     total += i
