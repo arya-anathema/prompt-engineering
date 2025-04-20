@@ -137,3 +137,83 @@ return x * x ;
   total = 0
   # TODO : Complete to return average
   pass```"
+21,"Analyze the following python utility script. Identify any potential logic issues or design flaws. Then, refactor it for better readability, correctness, and safety: ```# utils . py - Script to parse and summarize numeric CSV files
+import csv
+def read_csv ( filepath ) :
+  with open ( filepath , ’r ’) as f :
+    return [ row for row in csv . reader ( f ) ]
+def summarize_column ( data , index ) :
+  values = [ float ( row [ index ]) for row in data [1:]] # skip header
+  total = sum ( values )
+  avg = total / len ( values )
+  return total , avg
+def main () :
+  filepath = ’ data . csv ’
+  data = read_csv ( filepath )
+  total , avg = summarize_column ( data , 1)
+  print ( " Total : " , total )
+  print ( " Average : " , avg )
+if __name__ == ’ __main__ ’:
+  main ()```","You are an expert software engineer with many years of experience.","You've been assigned a code review for the following python script that parses CSV files. You have to first identify any logical issues or design flaws, then refactor the script for better readability, correctness, and safety. How would you do this? Give me the refactored code. ```# utils . py - Script to parse and summarize numeric CSV files
+import csv
+def read_csv ( filepath ) :
+  with open ( filepath , ’r ’) as f :
+    return [ row for row in csv . reader ( f ) ]
+def summarize_column ( data , index ) :
+  values = [ float ( row [ index ]) for row in data [1:]] # skip header
+  total = sum ( values )
+  avg = total / len ( values )
+  return total , avg
+def main () :
+  filepath = ’ data . csv ’
+  data = read_csv ( filepath )
+  total , avg = summarize_column ( data , 1)
+  print ( " Total : " , total )
+  print ( " Average : " , avg )
+if __name__ == ’ __main__ ’:
+  main ()```"
+22,"Complete the following python file-processing script. The goal is to clean each line, remove punctuation, and count word frequencies correctly: ```# file_processor . py - Incomplete script for processing text files
+import string
+def load_file ( filepath ) :
+  with open ( filepath , ’r ’) as f :
+    return f . readlines ()
+def clean_line ( line ) :
+  # TODO : Remove punctuation and make lowercase
+  pass
+def count_words ( lines ) :
+  word_counts = {}
+  for line in lines :
+  clean = clean_line ( line )
+  for word in clean . split () :
+    word_counts [ word ] = word_counts . get ( word , 0) + 1
+  return word_counts
+def main () :
+  filepath = ’ input . txt ’
+  lines = load_file ( filepath )
+  counts = count_words ( lines )
+  for word , count in sorted ( counts . items () ) :
+  print ( f " { word }: { count } " )
+if __name__ == ’ __main__ ’:
+  main ()```","You are an expert software engineer with many years of experience.","How would you complete the following python file script with the goal of cleaning each line, removing punctuation, and counting word frequencies? ```# file_processor . py - Incomplete script for processing text files
+import string
+def load_file ( filepath ) :
+  with open ( filepath , ’r ’) as f :
+    return f . readlines ()
+def clean_line ( line ) :
+  # TODO : Remove punctuation and make lowercase
+  pass
+def count_words ( lines ) :
+  word_counts = {}
+  for line in lines :
+  clean = clean_line ( line )
+  for word in clean . split () :
+    word_counts [ word ] = word_counts . get ( word , 0) + 1
+  return word_counts
+def main () :
+  filepath = ’ input . txt ’
+  lines = load_file ( filepath )
+  counts = count_words ( lines )
+  for word , count in sorted ( counts . items () ) :
+  print ( f " { word }: { count } " )
+if __name__ == ’ __main__ ’:
+  main ()```"
