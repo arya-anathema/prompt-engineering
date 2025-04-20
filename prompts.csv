@@ -151,8 +151,8 @@ def main () :
   filepath = ' data . csv '
   data = read_csv ( filepath )
   total , avg = summarize_column ( data , 1)
-  print ( " Total : " , total )
-  print ( " Average : " , avg )
+  print ( ' Total : ' , total )
+  print ( ' Average : ' , avg )
 if __name__ == ' __main__ ':
   main ()```","You are an expert software engineer with many years of experience.","You've been assigned a code review for the following python script that parses CSV files. You have to first identify any logical issues or design flaws, then refactor the script for better readability, correctness, and safety. How would you do this? Give me the refactored code. ```# utils . py - Script to parse and summarize numeric CSV files
 import csv
@@ -168,8 +168,8 @@ def main () :
   filepath = ' data . csv '
   data = read_csv ( filepath )
   total , avg = summarize_column ( data , 1)
-  print ( " Total : " , total )
-  print ( " Average : " , avg )
+  print ( ' Total : ' , total )
+  print ( ' Average : ' , avg )
 if __name__ == ' __main__ ':
   main ()```"
 22,"Complete the following python file-processing script. The goal is to clean each line, remove punctuation, and count word frequencies correctly: ```# file_processor . py - Incomplete script for processing text files
