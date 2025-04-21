@@ -40,6 +40,17 @@ if __name__ == "__main__":
     model_choices = ["gpt-4o", "gpt-4.1"]
 
     df = pd.read_csv("prompts.csv")
+
+    #create cols if they don't exist
+    for col in ["4o zero-shot", "4o role-play", "4.1 zero-shot", "4.1 role-play"]:
+        if col not in df.columns:
+            df[col] = ""
         
     for index, row in tqdm(df.iterrows()):
-        print(get_all_responses(1024, 1, row['zero-shot'], row['roleplay-role']))
+        responses = get_all_responses(1024, 1, row['zero-shot'], row['roleplay-role'])
+        df.at[index, "4o zero-shot"] = responses[0]
+        df.at[index, "4o role-play"] = responses[1]
+        df.at[index, "4.1 zero-shot"] = responses[2]
+        df.at[index, "4.1 role-play"] = responses[3]
+
+    df.to_csv("prompts_with_responses.csv", index=False)
