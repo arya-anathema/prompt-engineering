@@ -57,7 +57,7 @@ return s . length () ; // What if s is null ?
 // TODO : Create GET and POST endpoints using Ktor```","You are an expert software engineer with many years of experience.","You have been assigned to convert a data class into a REST API, and have been instructed to use Ktor. Here is the data class: ```data class Product ( val id : Int , val name : String , val price : Double )
 // TODO : Create GET and POST endpoints using Ktor```. How would you do this?"
 10,"Concisely summarize this python method:  ```def reverse_words ( sentence ) :
-  return ' '. join ( sentence . split () [:: -1])```","You are an expert software engineer with many years of experience.", "You are teaching a new hire some basic python, and are explaining the following python method: ```def reverse_words ( sentence ) :
+  return ' '. join ( sentence . split () [:: -1])```","You are an expert software engineer with many years of experience.","You are teaching a new hire some basic python, and are explaining the following python method: ```def reverse_words ( sentence ) :
   return ' '. join ( sentence . split () [:: -1])```. Provide a brief summary."
 11,"Generate a python function that checks if a number is prime.","You are an expert software engineer with many years of experience.","You are writing a basic example python method that takes a number n and checks if it's prime to show some interns. Provide the method."
 12,"Fix the bug in this python method present when n=0: ```def factorial ( n ) :
