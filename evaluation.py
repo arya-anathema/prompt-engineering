@@ -9,6 +9,10 @@ import seaborn as sns
 import sacrebleu
 import os
 
+from sklearn.metrics import f1_score
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 
 rouge = evaluate.load("rouge")
 meteor = evaluate.load("meteor")
@@ -36,6 +40,24 @@ def calcSacreBleu(str1,str2):
     bleu = sacrebleu.corpus_bleu(predlist,actulist)
 
     return bleu.score
+
+def calcF1Score(predStr,actuStr):
+
+  actuStrings = actuStr.split()
+  predStrings = predStr.split()
+
+  tokenizer = Tokenizer(num_words=None, char_level=False)
+  tokenizer.fit_on_texts(actuStrings + predStrings)
+
+  actuSequences = tokenizer.texts_to_sequences([actuStrings])
+  predSequences = tokenizer.texts_to_sequences([predStrings])
+
+  max_length = max(len(actuStrings), len(predStrings))
+  paddedActuSequences = pad_sequences(actuSequences, maxlen=max_length, padding='post')
+  paddedPredSequences = pad_sequences(predSequences, maxlen=max_length, padding='post')
+
+  f1_sequence = f1_score(paddedActuSequences.flatten(), paddedPredSequences.flatten(), average='macro')
+  return f1_sequence
 
 def getMatrix(responses,function):
     n = len(responses)
@@ -107,7 +129,7 @@ def makeAllNaturalLangGraphs(responses):
   makeGraph(rougeAvg, "Pairwise Rouge Score Comparison Average")
   makeGraph(meteorAvg, "Pairwise Meteor Score Comparison Average")
 
-"""
+
 def makeAllCodeLangGraphs(responses):
 
   bleu4Sum = None
@@ -138,7 +160,7 @@ def makeAllCodeLangGraphs(responses):
 
   makeGraph(bleu4Avg, "Pairwise Bleu-4 Score Comparison Average")
   makeGraph(F1Avg, "Pairwise F1 Score Comparison Average")
-"""
+
 
 df = pd.read_csv("prompts_with_responses.csv")
 
@@ -199,3 +221,4 @@ code_responses.append(responses[21])
 
 
 makeAllNaturalLangGraphs(nat_lang_responses)
+makeAllCodeLangGraphs(code_responses)
