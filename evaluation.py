@@ -165,7 +165,7 @@ def makeAllCodeLangGraphs(responses):
 df = pd.read_csv("prompts_with_responses.csv")
 
 columns=["task_no","4o zero-shot", "4o role-play", "4.1 zero-shot", "4.1 role-play"]
-model_names = ["gpt-4o zero shot" , "gpt-4o roleplaying", "gpt-4.1 zero shot", "gpt-4.1 roleplaying"]
+model_names = ["gpt-4o ZS" , "gpt-4o RP", "gpt-4.1 ZS", "gpt-4.1 RP"]
 
 responses = df[columns].values.tolist()
 
