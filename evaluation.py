@@ -10,8 +10,8 @@ import sacrebleu
 import os
 
 from sklearn.metrics import f1_score
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras._tf_keras.keras.utils import pad_sequences
+from keras._tf_keras.keras.preprocessing.text import Tokenizer
 
 
 rouge = evaluate.load("rouge")
