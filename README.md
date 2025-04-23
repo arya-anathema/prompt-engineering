@@ -47,4 +47,4 @@ python prompt-engineering.py
 
 # Report
 
-The assignment report is available in the file `Report.pdf`.
+The assignment report, containing qualitative analysis for each task response, is available in the file `Report.pdf`.
