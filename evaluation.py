@@ -193,8 +193,9 @@ code_responses.append(responses[7])
 code_responses.append(responses[8])
 #10 nat lang
 nat_lang_responses.append(responses[9])
-#11 nat lang
-nat_lang_responses.append(responses[10])
+#11 code
+responses_11_code = ["11","python def is_prime(n): ``` Check if a number is a prime number. Args: n (int): The number to check. Returns: bool: True if n is a prime number, False otherwise. ``` if n <= 1: return False # Numbers less than or equal to 1 are not prime if n <= 3: return True # 2 and 3 are prime numbers if n % 2 == 0 or n % 3 == 0: return False","python def is_prime(number): ``` Check if a number is prime. Args: number (int): The number to check. Returns: bool: True if the number is prime, False otherwise. ``` if number <= 1: return False if number <= 3: return True  # 2 and 3 are prime numbers if number % 2 == 0 or number % 3 == 0: return False # Check for factors from 5 to √number i = 5 while i * i <= number: if number % i == 0 or number % (i + 2) == 0: return False i += 6 return True","python def is_prime(n): ```Check if a number is prime.``` if n <= 1: return False if n <= 3: return True if n % 2 == 0 or n % 3 == 0: return False i = 5 while i * i <= n: if n % i == 0 or n % (i + 2) == 0: return False i += 6 return True ","python def is_prime(n): ```Return True if n is a prime number, otherwise False.``` if n <= 1: return False if n == 2: return True if n % 2 == 0: return False for i in range(3, int(n ** 0.5) + 1, 2): if n % i == 0: return False return True"]
+code_responses.append(responses_11_code)
 #12 code
 code_responses.append(responses[11])
 #13 code
